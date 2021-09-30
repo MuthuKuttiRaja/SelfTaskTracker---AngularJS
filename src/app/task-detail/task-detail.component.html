@@ -1,0 +1,43 @@
+<div *ngIf="task">
+  task name: {{task.name}}
+  <div>
+    <ul>
+      <li>id: {{task.id}}</li>
+      <li>Status: {{task.status}}</li>
+      <li>timeStarted: {{task.timeStarted}}</li>
+      <li>Estimated Complete Time: {{task.timeCompleted}}</li>
+      <li>Notes: {{task.notes}}</li>
+      <li>Priority: {{task.priority}}</li>
+    </ul>
+  </div>
+<div>
+    <table id="notesTable">
+    <thead>
+      <tr>
+        <th>notesId</th>
+        <th>taskId</th>
+        <th>notes</th>
+        <th>createdDateTime</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let notes of notesList">
+        <td>{{notes.notesId}}</td>
+        <td>{{notes.taskId}}</td>
+        <td>{{notes.notes}}</td>
+        <td>{{notes.createdDateTime}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <div>
+    <label>Notes: </label>
+    <input type="text" id="addNotes"><br>
+    <button (click)="addNotes()">Add Notes</button>
+  </div>
+</div>
+
+
+
+<button (click)="goBack()">go back</button>

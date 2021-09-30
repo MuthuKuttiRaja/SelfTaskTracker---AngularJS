@@ -1,0 +1,23 @@
+<div>
+  <p>
+    Below are the list of tasks
+  </p>
+  <table id="taskTable">
+    <thead>
+      <tr>
+        <th>Tasks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>
+            <a routerLink="/detail/{{task.id}}">{{task.project}} - {{task.name}}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ 
+<div style='margin-top: 25px'>
+    <a routerLink="/task-add">Add new Task</a>
+</div>

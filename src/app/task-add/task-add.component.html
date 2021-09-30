@@ -1,0 +1,48 @@
+<div>
+  <div style="width:100px">
+    Project Name:
+  </div>
+  <div style="width:200px">
+    <input type="text" id="projectName"><br>
+  </div>
+
+  <div style="width:100px">
+    Task Name:
+  </div>
+  <div style="width:200px">
+    <input type="text" id="taskName"><br>
+  </div>
+
+  <div style="width:100px">
+    Status:
+  </div>
+  <div style="width:200px">
+    <select id="taskStatus" size="1">
+      <option value="In Progress">In Progress</option>
+      <option value="Queued">Queued</option>
+      <option value="Completed">Completed</option>
+      <option value="Planned">Planned</option>
+    </select>
+  </div>
+
+  <div style="width:100px">
+    Priority
+  </div>
+  <div style="width:200px">
+    <select id="taskPriority" size="1">
+      <option value="1">1 - Urgent</option>
+      <option value="3">3 - Medium Priority</option>
+      <option value="5">5 - Less Priority</option>
+    </select>
+  </div>
+
+  <div style="width:100px">
+    Estimated Complete Time (YYYY-MM-DD)
+  </div>
+  <div style="width:200px">
+    <input type="text" id="estimatedCompleteTime"><br>
+  </div>
+  <div>
+    <button (click)="addTask()">ADD Task</button>
+  </div>
+</div>
